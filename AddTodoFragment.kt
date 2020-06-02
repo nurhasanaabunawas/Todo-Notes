@@ -64,7 +64,7 @@ class AddTodoFragment : Fragment() {
                 if(checkRemind.isChecked) context?.let { it1 -> alarmReceiver.setReminder(it1, dueDate - 3600 * 1000, title) }
                 else context?.let { it1 -> alarmReceiver.setReminder(it1, dueDate, title) }
             }
-            else Toast.makeText(context,"Please Enter Data Correctly!", Toast.LENGTH_SHORT).show()
+            else Toast.makeText(context,"Masukkan Data yang benar!", Toast.LENGTH_SHORT).show()
 
             listViewModel.observableStatus.observe(viewLifecycleOwner, Observer { todo ->
                 todo?.let { check(todo) }
@@ -96,9 +96,9 @@ class AddTodoFragment : Fragment() {
         when (status) {
             true ->  {
                 findNavController().popBackStack()
-                Toast.makeText(context,"To-Do Added Successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"List Berhasil Ditambahkan", Toast.LENGTH_SHORT).show()
             }
-            false -> Toast.makeText(context,"To-Do Add Failed", Toast.LENGTH_SHORT).show()
+            false -> Toast.makeText(context,"List failed gagal, coba lagi", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -20,8 +20,7 @@
         android:layout_height="240dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
-        android:contentDescription="@string/empty_image"
-        android:src="@drawable/to_do_list" />
+        android:contentDescription="@string/empty_image" />
 
     <TextView
         android:id="@+id/empty_list_message"
@@ -38,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:fabAlignmentMode="center"
+        app:fabAlignmentMode="end"
         app:fabCradleMargin="@dimen/bottom_app_bar_fab_cradle_margin"
         app:fabCradleRoundedCornerRadius="@dimen/bottom_app_bar_fab_cradle_corner_radius"
         app:hideOnScroll="true"
